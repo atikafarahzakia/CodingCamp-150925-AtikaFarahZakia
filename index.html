@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <nav>
+      <h1>ToDo List App</h1>
+    </nav>
+
+     <div class="container">
+      <div class="group1">
+        <div class="add-todo">
+          <label for="todo">Add Todo</label><br />
+          <input type="text" id="todo" placeholder="Enter todo" />
+        </div>
+        <div class="tgl-buat">
+          <label for="date">Date</label><br />
+          <input type="date" id="tgl-buat" />
+        </div>
+        <div class="status">
+          <label for="status">Status</label><br />
+          <select name="status" id="status">
+            <option value="Complete">Complete</option>
+            <option value="Pending">Pending</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="group2">
+        <div class="deadline">
+          <label for="date">Deadline</label><br />
+          <input type="date" id="deadline" />
+        </div>
+        <div class="prioritas">
+          <label for="prioritas">Prioritas</label><br />
+          <select name="prioritas" id="prioritas">
+            <option value="Rendah">Rendah</option>
+            <option value="Sedang">Sedang</option>
+            <option value="Tinggi">Tinggi</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="btn-add">
+        <input type="submit" name="add" id="add" value="Add ToDo" />
+      </div>
+    </div>
+
+    <!-- Filter Buttons -->
+<div class="filter-buttons">
+  <h3>Filter Status</h3>
+  <button class="filter-btn" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="Pending">Pending</button>
+  <button class="filter-btn" data-filter="Complete">Complete</button>
+</div>
+
+<div class="filter-buttons">
+  <h3>Filter Prioritas</h3>
+  <button class="filter-btn" data-prioritas="all">All</button>
+  <button class="filter-btn" data-prioritas="Rendah">Rendah</button>
+  <button class="filter-btn" data-prioritas="Sedang">Sedang</button>
+  <button class="filter-btn" data-prioritas="Tinggi">Tinggi</button>
+</div>
+
+
+    <!-- Daftar Output -->
+    <div class="todo-list">
+      <h2>Daftar ToDo</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Todo</th>
+            <th>Tanggal Buat</th>
+            <th>Status</th>
+            <th>Deadline</th>
+            <th>Prioritas</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="todo-output">
+          <!-- Data muncul di sini -->
+        </tbody>
+      </table>
+    </div>
+    
+    <script src="script/index.js"></script>
+  </body>
+</html>

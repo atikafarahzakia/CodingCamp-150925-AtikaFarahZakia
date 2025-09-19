@@ -1,0 +1,213 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f6fa;
+  color: #333;
+}
+
+nav {
+  background-color: #ADB6C4;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.container {
+  background: #fff;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  width: 90%;
+  max-width: 1000px;
+}
+
+.group1,
+.group2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.add-todo,
+.tgl-buat,
+.status,
+.deadline,
+.prioritas {
+  flex: 1;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  color: #444;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+  width: 100%;
+  height: 42px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 0 12px;
+  font-size: 15px;
+  background: #fafafa;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus {
+  border-color: #0077ff;
+  background: #fff;
+  box-shadow: 0 0 6px rgba(0, 119, 255, 0.3);
+  outline: none;
+}
+
+.btn-add {
+  margin-top: 15px;
+}
+
+input[type="submit"] {
+  background-color: #294C60;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #001B2E;
+  transform: translateY(-2px);
+}
+
+.todo-list h2 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 22px;
+  color: #222;
+}
+
+table {
+  margin: 25px auto;
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #294C60;
+  color: white;
+  font-size: 15px;
+}
+
+tr:hover {
+  background: #f9faff;
+}
+
+.action-btn {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 0 4px;
+  font-size: 13px;
+  font-weight: bold;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.action-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.edit-btn {
+  background: #ff9800;
+  color: white;
+}
+
+.delete-btn {
+  background: #f44336;
+  color: white;
+}
+
+.filter-buttons {
+  margin: 25px auto;
+  padding: 15px;
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  width: fit-content;
+}
+
+.filter-buttons h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.25s ease;
+}
+
+.filter-btn:hover {
+  transform: translateY(-2px);
+}
+
+.filter-btn[data-filter="all"],
+.filter-btn[data-prioritas="all"] {
+  background-color: #6c757d;
+  color: white;
+}
+
+.filter-btn[data-filter="Pending"] {
+  background-color: #ff9800;
+  color: white;
+}
+
+.filter-btn[data-filter="Complete"] {
+  background-color: #4caf50;
+  color: white;
+}
+
+.filter-btn[data-prioritas="Rendah"] {
+  background-color: #2196f3;
+  color: white;
+}
+
+.filter-btn[data-prioritas="Sedang"] {
+  background-color: #ffc107;
+  color: black;
+}
+
+.filter-btn[data-prioritas="Tinggi"] {
+  background-color: #f44336;
+  color: white;
+}
